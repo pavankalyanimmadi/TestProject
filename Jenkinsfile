@@ -7,14 +7,19 @@ pipeline {
     
                         
         
-       stage('Test') {
+      
+    
+    
+        stages {
+            
+          stage('Test') {
             steps {
                 bat "mvn clean test"
             }
         }
-    
-    
-        stages {
+            
+            
+            
     
         stage('sonar code quality check'){
             steps{
